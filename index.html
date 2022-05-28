@@ -15,7 +15,70 @@
     <title>Tip calculator app</title>
   </head>
   <body>
-    Bill Select Tip % 5% 10% 15% 25% 50% Custom Number of People Tip Amount /
-    person Total / person Reset
+    <div class="splitter-wrapper">
+      <img id="splitter-logo" alt="splitter logo" src="./images/logo.svg" />
+      <div class="board-wrapper">
+        <form id="calculator" onSubmit="return false">
+          <div class="calculator-input-wrapper">
+            <div class="calculator-label-container">
+              <label for="bill-amount">Bill</label>
+              <label id="bill-amount-error">Can't be zero</label>
+            </div>
+            <div class="calculator-input-container">
+              <img src="./images/icon-dollar.svg" alt="bill icon" />
+              <input id="bill-amount" type="number" class="calculator-input" />
+            </div>
+          </div>
+          <div class="calculator-input-wrapper">
+            <div class="calculator-label-container">
+              <label for="tip-percentage">Select Tip %</label>
+              <label id="tip-percentage-error">Can't be zero</label>
+            </div>
+            <div id="tip-percentage" class="calculator-tip-selector-container">
+              <button class="tip-btn" id="tip-percentage-5">5%</button>
+              <button class="tip-btn" id="tip-percentage-10">10%</button>
+              <button class="tip-btn" id="tip-percentage-15">15%</button>
+              <button class="tip-btn" id="tip-percentage-25">25%</button>
+              <button class="tip-btn" id="tip-percentage-50">50%</button>
+              <!-- <button class="tip-btn" id="tip-percentage-custom">Custom</button> -->
+              <input id="tip-percentage-custom" />
+            </div>
+          </div>
+          <div class="calculator-input-wrapper">
+            <div class="calculator-label-container">
+              <label for="number-of-people">Number of People</label>
+              <label id="number-of-people-error">Can't be zero</label>
+            </div>
+            <div class="calculator-input-container">
+              <img src="./images/icon-person.svg" alt="person icon" />
+              <input
+                id="number-of-people"
+                type="number"
+                class="calculator-input"
+              />
+            </div>
+          </div>
+        </form>
+        <div class="modal-container">
+          <div class="data-wrapper">
+            <div class="data-container">
+              <div class="data-label-container">
+                <label> Tip Amount </label>
+                <label> / person </label>
+              </div>
+              <p id="tip-amount-result">$0.00</p>
+            </div>
+            <div class="data-container">
+              <div class="data-label-container">
+                <label> Total </label>
+                <label> / person </label>
+              </div>
+              <p id="total-amount-result">$0.00</p>
+            </div>
+          </div>
+          <button id="reset-btn">Reset</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

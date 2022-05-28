@@ -1,11 +1,209 @@
-.info{
- background-color: hsl(183, 100%, 15%);
- background-color: hsl(186, 14%, 43%);
- background-color:hsl(184, 14%, 56%);
- background-color:hsl(185, 41%, 84%);
- background-color:hsl(189, 41%, 97%);
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
+  
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+*{
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+}
 body{
-    background-color:hsl(185, 41%, 84%);  
+    color: #577975;
+    margin: 0;
+    background-color:#CBE3E7;
+    width: 100vw;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.splitter-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 820px;
+    height: 620px;
+}
+
+#splitter-logo{
+    width:85px;
+    margin: auto;
+    margin-top: 0;
+}
+
+.board-wrapper{
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 30px;
+    background-color:white;
+    box-shadow: 1px 8px 20px 10px rgba(0, 0, 0, 0.1);
+}
+ 
+#calculator{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+.board-wrapper form{
+    width: 48%;
+}
+
+.calculator-label-container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.calculator-label-container label:nth-child(2){
+    color: #CE7E6C;
+}
+
+.calculator-input-container{
+    cursor: pointer;
+    border-radius: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F4F8FA;
+    padding: 10px;
+    border:#F4F8FA 3px solid
+}
+
+.calculator-input-container input{
+    caret-color:#87EADF;
+    cursor: pointer;
+    color: #435153;
+    width:90%;
+    font-size: 24px;
+    text-align: right;
+    border: none;
+    outline: none;
+    background-color: #F4F8FA;
+}
+
+.calculator-input-container:focus-within{
+    border:#87EADF 3px solid
+}
+
+.tip-btn{
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    background-color: #00474B;
+    border-radius: 8px;
+}
+
+#tip-percentage-custom{
+    border:#F4F8FA 3px solid;
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 8px;
+    min-width: 0;
+    cursor: pointer;
+    color: #435153;
+    caret-color:#87EADF;
+    font-size: 24px;
+    text-align: right;
+    outline: none;
+    background-color: #F4F8FA;
+}
+
+#tip-percentage-custom:focus-within{
+    border:#87EADF 3px solid
+}
+
+.calculator-input-container:focus-within{
+    border:#87EADF 3px solid
+}
+
+.calculator-tip-selector-container{
+    display: grid;
+    grid-template-areas: "five ten fifth"
+                         "twentyfive fifty custom";
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    height: 120px;
+    gap: 10px;
+}
+
+.tip-btn:focus{
+    color:#00474B;
+    background-color: #87EADF;
+}
+
+#tip-percentage-custom{
+    color:#577975;
+    font-weight: 700;
+    background-color:#F3F8FA;
+}
+
+.modal-container{
+    border-radius: 20px;
+    background-color: #00474B;
+    box-sizing: border-box;
+    width: 48%;
+    padding:  45px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.data-wrapper .data-container:nth-child(1){
+    margin-bottom: 20px;
+}
+
+.data-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.data-label-container {
+    transform: translateY(10px);
+}
+
+.data-label-container label:nth-child(1){
+    color: white;
+}
+
+.data-label-container label:nth-child(2){
+    display: block;
+}
+
+.data-container p{
+    margin: 0;
+    font-size: 40px;
+    color: #00C9B0;
+}
+
+#reset-btn{
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #00C9B0;
+    padding:7px 0 ;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+#reset-btn:active{
+    background-color: #0bb29e;
+    box-shadow: 1px 2px 3px 5px rgba(0, 0, 0, 0.1);
 }
