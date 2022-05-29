@@ -66,7 +66,8 @@ body{
 }
 
 .calculator-label-container label:nth-child(2){
-    color: #CE7E6C;
+    color: #ff2f00;
+    display: none;
 }
 
 .calculator-input-container{

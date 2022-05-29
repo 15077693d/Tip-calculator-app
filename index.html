@@ -22,9 +22,12 @@
           <div class="calculator-input-wrapper">
             <div class="calculator-label-container">
               <label for="bill-amount">Bill</label>
-              <label id="bill-amount-error">Can't be zero</label>
+              <label id="bill-amount-error">WARNING_TEXT</label>
             </div>
-            <div class="calculator-input-container">
+            <div
+              class="calculator-input-container"
+              id="bill-amount-input-container"
+            >
               <img src="./images/icon-dollar.svg" alt="bill icon" />
               <input id="bill-amount" type="number" class="calculator-input" />
             </div>
@@ -32,7 +35,7 @@
           <div class="calculator-input-wrapper">
             <div class="calculator-label-container">
               <label for="tip-percentage">Select Tip %</label>
-              <label id="tip-percentage-error">Can't be zero</label>
+              <label id="tip-percentage-error">WARNING_TEXT</label>
             </div>
             <div id="tip-percentage" class="calculator-tip-selector-container">
               <button class="tip-btn" id="tip-percentage-5">5%</button>
@@ -41,15 +44,18 @@
               <button class="tip-btn" id="tip-percentage-25">25%</button>
               <button class="tip-btn" id="tip-percentage-50">50%</button>
               <!-- <button class="tip-btn" id="tip-percentage-custom">Custom</button> -->
-              <input id="tip-percentage-custom" />
+              <input id="tip-percentage-custom" type="number" />
             </div>
           </div>
           <div class="calculator-input-wrapper">
             <div class="calculator-label-container">
               <label for="number-of-people">Number of People</label>
-              <label id="number-of-people-error">Can't be zero</label>
+              <label id="number-of-people-error">WARNING_TEXT</label>
             </div>
-            <div class="calculator-input-container">
+            <div
+              class="calculator-input-container"
+              id="number-of-people-input-container"
+            >
               <img src="./images/icon-person.svg" alt="person icon" />
               <input
                 id="number-of-people"
@@ -81,4 +87,5 @@
       </div>
     </div>
   </body>
+  <script type="text/javascript" src="index.js"></script>
 </html>
