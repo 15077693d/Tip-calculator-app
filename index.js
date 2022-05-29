@@ -80,6 +80,7 @@ function handleClickCustomTip() {
 }
 
 function handleUnselectCustomTip() {
+  document.getElementById("tip-percentage-custom-btn").value = "";
   document
     .getElementById("tip-percentage-custom-input")
     .removeEventListener("input", handleCustomTipInput);
